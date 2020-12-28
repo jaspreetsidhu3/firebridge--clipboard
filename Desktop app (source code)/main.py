@@ -1,11 +1,11 @@
 import tkinter
-
+//List for saving keys of data
 arr = []
 
-
+# Setting key which is used to delete data
 def setupkey():
     from firebase import firebase
-    firebase = firebase.FirebaseApplication('Add Firebase URL here', None)
+    firebase = firebase.FirebaseApplication('Add firebase URL', None)
     result = firebase.get('/Clipboard/', '')
     arr.clear()
     p = 0
@@ -16,10 +16,10 @@ def setupkey():
     except Exception as e:
         print(e)
 
-
+# Inserting data in list
 def add_list_function(list):
     from firebase import firebase
-    firebase = firebase.FirebaseApplication('Add Firebase URL here', None)
+    firebase = firebase.FirebaseApplication('Add firebase URL', None)
     result = firebase.get('/Clipboard/', '')
     setupkey()
     k = 0
@@ -30,22 +30,22 @@ def add_list_function(list):
     except Exception as e:
         print(e)
 
-
+# Refresh Window
 def refresh():
     window.destroy()
     onStart()
 
-
+# Adding data
 def add_data(ned):
     from firebase import firebase
-    firebase = firebase.FirebaseApplication('Add Firebase URL here', None)
+    firebase = firebase.FirebaseApplication('Add firebase URL', None)
     firebase.post('/Clipboard/', str(ned.get()))
     refresh()
 
-
+# Deleting/Removing data
 def remove_data(dele):
     from firebase import firebase
-    firebase = firebase.FirebaseApplication('Add Firebase URL here', None)
+    firebase = firebase.FirebaseApplication('Add firebase URL', None)
     index = (int)(dele.get())
     firebase.delete('/Clipboard', arr[index - 1])
     refresh()
@@ -62,6 +62,7 @@ def onStart():
     window.title("ClipBoard")
     window.minsize(400, 600)
     window.maxsize(500, 800)
+    # Components here ...
     reload = tkinter.Button(window, text='Reload', width=25, command=refresh)
     reload.pack(ipady=13, pady=23)
     Lb = tkinter.Listbox(window)
@@ -71,7 +72,6 @@ def onStart():
     e1.pack(ipadx=23, ipady=13, pady=23)
     addbutton = tkinter.Button(window, text='Add', width=25, command=lambda: add_data(new_data))
     addbutton.pack(pady=23)
-
     can = tkinter.Canvas(window, height=100, width=100)
     e2 = tkinter.Entry(can, width=13, textvariable=delete_data)
     removebtn = tkinter.Button(can, text="Delete", width=15, command=lambda: remove_data(delete_data))
@@ -84,3 +84,4 @@ def onStart():
 if __name__ == '__main__':
     onStart()
     print(arr)
+    k = input("prompt: ")
