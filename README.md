@@ -40,7 +40,7 @@ Transfer text message from pc to mobile or mobile to pc within a fraction of sec
 <h4>Android application</h4>
 <p>
 1. double tap on list item to select text. <br/>
-2. long press on list item to delete item inside editbox (at left delete button side).  
+2. long press on list item to delete item.  
 </p>
 <div align="left">
 <img src="Screenshot/a1.jpg" width=250 height=450 />
@@ -50,7 +50,7 @@ Transfer text message from pc to mobile or mobile to pc within a fraction of sec
 </div>
 <h4>Desktop application</h4>
 <p>
-1. To delete item enter the index number.  
+1. To delete item enter the index number inside editbox (at left delete button side).  
 </p>
 <div align="left">
 <img src="Screenshot/desktop.png" width=250 height=450 />
