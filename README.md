@@ -36,7 +36,7 @@ Transfer text message from pc to mobile or mobile to pc within a fraction of sec
 1. Desktop application code is available in Desktop app folder.
 2. Open it in Pycharm or other python IDE and run it.
 
-### Screenshots
+## Screenshots
 <h4>Android application</h4>
 <div align="left">
 <img src="Screenshot/a1.jpg" width=250 height=450 />
@@ -44,7 +44,10 @@ Transfer text message from pc to mobile or mobile to pc within a fraction of sec
 <img src="Screenshot/a4.jpg" width=250 height=450 />
 <img src="Screenshot/a3.jpg" width=250 height=450 />
 </div>
-  
+<h4>Desktop application</h4>
+<div align="left">
+<img src="Screenshot/desktop.png" width=250 height=450 />
+</div>
   
 <!-- CONTRIBUTING -->
 ## Contributing
